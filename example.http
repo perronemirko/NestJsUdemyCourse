@@ -18,7 +18,7 @@ content-type: application/json
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
 ###
-GET http://localhost:3000/tasks?status=OPEN&search=Fa HTTP/1.1
+GET http://localhost:5000/tasks?status=OPEN&search=a HTTP/1.1
 content-type: application/json
 
 {
@@ -51,6 +51,6 @@ content-type: application/json
 {
     "title": "sample",
     "description": "description",
-    "status": "DONE",
+    "status": "IN_PROGRES",
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
