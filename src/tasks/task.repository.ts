@@ -13,12 +13,11 @@ export class TaskRepository extends Repository<Task>{
         const query = this.createQueryBuilder('task');
         // Andware id Different from where. The Were module override all the Andware modules. 
         if (status) {
-            //query.andWhere('task.status = :status', { status: 'OPEN'}) //static
             query.andWhere('task.status = :status', { status}) // Dynamic provided by the client
         }
 
         if (search) {
-            //query.andWhere('task.status = :status', { status: 'OPEN'}) //static
+
             query.andWhere('(task.title LIKE :search OR task.description LIKE :search)', { search: `%${search}%` }) // `%${search}%`=> Partial matchers. //Search also for partial provided string Dynamic provided by the client
         }
 

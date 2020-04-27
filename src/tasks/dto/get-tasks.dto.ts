@@ -1,4 +1,3 @@
-//import { TaskStatus } from "../task.model"; // BEFORE ORM
 import { TaskStatus } from "../task-status-enum";
 import { IsOptional, IsIn, IsNotEmpty } from "class-validator";
 import { TaskStatusValidationPipe } from "../pipes/task-status-validation.pipes";
