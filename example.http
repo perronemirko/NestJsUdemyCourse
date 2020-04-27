@@ -1,11 +1,11 @@
-GET  http://localhost:3000/tasks HTTP/1.1
+GET  http://localhost:5000/tasks HTTP/1.1
 ###
-POST http://localhost:3000/tasks HTTP/1.1
+POST http://localhost:5000/tasks HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Java",
-    "description": "Fa cagare",
+    "title": "Call Sara",
+    "description": "Check if she is all right.",
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
 ###
@@ -35,7 +35,7 @@ content-type: application/json
 }
 ###
 
-DELETE http://localhost:3000/tasks/6752ef24-4e1e-45e4-94ca-b86dafe95356 HTTP/1.1
+DELETE http://localhost:5000/tasks/2 HTTP/1.1
 content-type: application/json
 
 {
@@ -45,12 +45,12 @@ content-type: application/json
 }
 ###
 
-PATCH  http://localhost:3000/tasks/9fb4276d-29f9-4313-9f0f-34486134fcd4/status HTTP/1.1
+PATCH  http://localhost:5000/tasks/1/status HTTP/1.1
 content-type: application/json
 
 {
     "title": "sample",
     "description": "description",
-    "status": "Ivanlsia",
+    "status": "DONE",
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }

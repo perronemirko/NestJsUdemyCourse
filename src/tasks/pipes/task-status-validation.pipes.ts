@@ -1,5 +1,6 @@
 import { PipeTransform, ArgumentsHost, ArgumentMetadata, BadRequestException } from "@nestjs/common";
-import { TaskStatus } from "../task.model";
+//import { TaskStatus } from "../task.model"; //BEFORE ORM
+import { TaskStatus } from "../task-status-enum";
 
 // Custom Pipe
 export class TaskStatusValidationPipe implements PipeTransform {
