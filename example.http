@@ -1,0 +1,56 @@
+GET  http://localhost:3000/tasks HTTP/1.1
+###
+POST http://localhost:3000/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Java",
+    "description": "Fa cagare",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+###
+GET http://localhost:3000/tasks/f7dd94ac-0171-4b58-9591-1271bfab36af HTTP/1.1
+content-type: application/json
+
+{
+    "title": "JavaScript",
+    "description": "Is not the same",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+###
+GET http://localhost:3000/tasks?status=OPEN&search=Fa HTTP/1.1
+content-type: application/json
+
+{
+    "status": "OPEN",
+    "search": "hello"
+}
+###
+GET http://localhost:3000/tasks?status=IN_PROGRESS HTTP/1.1
+content-type: application/json
+
+{
+    "status": "OPEN",
+    "search": "hello"
+}
+###
+
+DELETE http://localhost:3000/tasks/6752ef24-4e1e-45e4-94ca-b86dafe95356 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "sample",
+    "description": "description",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+###
+
+PATCH  http://localhost:3000/tasks/9fb4276d-29f9-4313-9f0f-34486134fcd4/status HTTP/1.1
+content-type: application/json
+
+{
+    "title": "sample",
+    "description": "description",
+    "status": "Ivanlsia",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
