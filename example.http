@@ -1,4 +1,12 @@
 GET  http://localhost:5000/tasks HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTA0MTI3LCJleHAiOjE1ODgxMDc3Mjd9.wLnuguGiGn2l7BB1HUpVgN2wh28HC3Qwe9ThvrLxEGg
+
+{
+    "username": "Mirko867",
+    "password": "MirkoPe!23$@3asdawea"
+}
+
 ###
 POST http://localhost:5000/tasks HTTP/1.1
 content-type: application/json
@@ -51,6 +59,50 @@ content-type: application/json
 {
     "title": "sample",
     "description": "description",
-    "status": "IN_PROGRES",
+    "status": "IN_PROGRESS",
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+########### SIGN UP METHOD ############
+
+###
+POST http://localhost:5000/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Mirko867",
+    "password": "MirkoPe!23$@3asdawea"
+}
+
+
+###
+POST http://localhost:5000/auth/signin HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Mirko867",
+    "password": "MirkoPe!23$@3asdawea"
+}
+
+
+
+###
+POST http://localhost:5000/auth/test HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTAzNzg3LCJleHAiOjE1ODgxMDczODd9.SAx88tCQfyLhtI9iV6KmmqCmbdIuWMOBaVnE5hRJMl0
+
+{
+    "username": "Mirko867",
+    "password": "MirkoPe!23$@3asdawea"
+}
+
+
+###
+POST http://localhost:5000/auth/tests HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTA0MTI3LCJleHAiOjE1ODgxMDc3Mjd9.wLnuguGiGn2l7BB1HUpVgN2wh28HC3Qwe9ThvrLxEGg
+
+{
+    "username": "Mirko867",
+    "password": "MirkoPe!23$@3asdawea"
 }
