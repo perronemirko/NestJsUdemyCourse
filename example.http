@@ -1,6 +1,7 @@
 GET  http://localhost:5000/tasks HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTA0MTI3LCJleHAiOjE1ODgxMDc3Mjd9.wLnuguGiGn2l7BB1HUpVgN2wh28HC3Qwe9ThvrLxEGg
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTc4NDM4LCJleHAiOjE1ODgxODIwMzh9.ZZabBr9m8X1kNWQp0n7IYqpgUVUJwYuh2gA4yDlOr8c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3VVNFUjIiLCJpYXQiOjE1ODgxNzkyNDAsImV4cCI6MTU4ODE4Mjg0MH0.GVcuGdPvoPpUJ-DDfjUyJogS1XMktCgBrgAvldEJgJ4
 
 {
     "username": "Mirko867",
@@ -10,10 +11,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pc
 ###
 POST http://localhost:5000/tasks HTTP/1.1
 content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTc4NDM4LCJleHAiOjE1ODgxODIwMzh9.ZZabBr9m8X1kNWQp0n7IYqpgUVUJwYuh2gA4yDlOr8c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3VVNFUjIiLCJpYXQiOjE1ODgxNzkyNDAsImV4cCI6MTU4ODE4Mjg0MH0.GVcuGdPvoPpUJ-DDfjUyJogS1XMktCgBrgAvldEJgJ4
 
 {
-    "title": "Call Sara",
-    "description": "Check if she is all right.",
+    "title": "Call Jana",
+    "description": "Check if lol",
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
 ###
@@ -85,11 +88,10 @@ content-type: application/json
 }
 
 
-
 ###
 POST http://localhost:5000/auth/test HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTAzNzg3LCJleHAiOjE1ODgxMDczODd9.SAx88tCQfyLhtI9iV6KmmqCmbdIuWMOBaVnE5hRJMl0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTc3NTcxLCJleHAiOjE1ODgxODExNzF9.YZARk2JjutxZ9cJ9wo-rXrEIfMhy-lP70qJI0Z4Z9oE
 
 {
     "username": "Mirko867",
@@ -100,7 +102,52 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pc
 ###
 POST http://localhost:5000/auth/tests HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTA0MTI3LCJleHAiOjE1ODgxMDc3Mjd9.wLnuguGiGn2l7BB1HUpVgN2wh28HC3Qwe9ThvrLxEGg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTc4NDM4LCJleHAiOjE1ODgxODIwMzh9.ZZabBr9m8X1kNWQp0n7IYqpgUVUJwYuh2gA4yDlOr8c
+
+{
+    "username": "Mirko867",
+    "password": "MirkoPe!23$@3asdawea"
+}
+
+
+
+########### SIGN UP METHOD USER2 ############
+
+###
+POST http://localhost:5000/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Mirko867USER2",
+    "password": "MirkoPe!23$@3asdawea"
+}
+
+
+###
+POST http://localhost:5000/auth/signin HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Mirko867USER2",
+    "password": "MirkoPe!23$@3asdawea"
+}
+
+
+###
+POST http://localhost:5000/auth/test HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3VVNFUjIiLCJpYXQiOjE1ODgxNzkyNDAsImV4cCI6MTU4ODE4Mjg0MH0.GVcuGdPvoPpUJ-DDfjUyJogS1XMktCgBrgAvldEJgJ4
+
+{
+    "username": "Mirko867",
+    "password": "MirkoPe!23$@3asdawea"
+}
+
+
+###
+POST http://localhost:5000/auth/tests HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3VVNFUjIiLCJpYXQiOjE1ODgxNzkyNDAsImV4cCI6MTU4ODE4Mjg0MH0.GVcuGdPvoPpUJ-DDfjUyJogS1XMktCgBrgAvldEJgJ4
 
 {
     "username": "Mirko867",

@@ -1,4 +1,4 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable, UnauthorizedException, Logger } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UserRepository } from './user.repository';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -8,6 +8,7 @@ import { JwtPayload } from './jwt-payload.interface';
 
 @Injectable()
 export class AuthService {
+    private logger = new Logger('AuthService');
     /*When the service initialized Inject the UserRepository instance 
         into the userRepository as an agroument 
         and becaouse of the private parameter it will just become as a class member
@@ -33,7 +34,7 @@ export class AuthService {
 
         const payload: JwtPayload = { username };
         const accessToken = await this.jwtServices.sign(payload);
-
+        this.logger.debug(`Generated JWT token with payload ${JSON.stringify(payload)}.`);
         return {accessToken};
     }
 }
