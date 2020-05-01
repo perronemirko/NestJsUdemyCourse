@@ -23,18 +23,18 @@ export class AuthController {
         return this.authService.signIn(authCredentialDto);
     }
 
-    @Post('/test')
-    @UseGuards(AuthGuard())
-    test(@Req() req){
-        console.log('req => ', req.user);
+    // @Post('/test')
+    // @UseGuards(AuthGuard())
+    // test(@Req() req){
+    //     //console.log('req => ', req.user);
         
-    }
+    // }
 
-    @Post('/tests')
-    @UseGuards(AuthGuard())
-    tests(@GetUser() user: User){
-        console.log('req => ', user);
+    // @Post('/tests')
+    // @UseGuards(AuthGuard())
+    // tests(@GetUser() user: User){
+    //     console.log('req => ', user);
         
-    }
+    // }
 
 }

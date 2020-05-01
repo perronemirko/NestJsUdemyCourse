@@ -42,7 +42,6 @@ export class TaskService {
 
     public async deleteTaskById(id: number, user: User): Promise<void> {
         const result = await this.taskRepository.delete({id, userId: user.id}); // The where clause is done under the hood 
-        console.log(result);  
         if (result.affected === 0){
             throw new NotFoundException(`Task with ID ${id} not found!`);
             
