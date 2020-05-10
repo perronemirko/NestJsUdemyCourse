@@ -104,3 +104,9 @@ dist
 .tern-port
 # SSL CERTIFICATES
 src/ssl/*
+#### FRONTEND ####
+
+front-end-test/task-management-frontend/src/ssl/*
+front-end-test/task-management-frontend/node_modules/
+front-end-test/task-management-frontend/jspm_packages/
+
